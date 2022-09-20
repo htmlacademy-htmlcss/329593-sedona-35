@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Nurlan Irisov](https://up.htmlacademy.ru/htmlcss/35/user/329593).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
