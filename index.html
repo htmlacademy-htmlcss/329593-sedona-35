@@ -1,10 +1,163 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Седона</title>
+    <title>Седона поиск жилья</title>
   </head>
-  <body>
+  <body class="page-body">
+    <header class="main-header"><!--Шапка-->
+      <nav class="main-navigation"><!--Навигация-->
+        <a class="main-header-logo">
+          <img src="#" width="138" height="70" alt="Логотип «Седона»">
+        </a>
+        <ul class="site-navigation">
+          <li class="site-navigation-item"><a class="site-navigation-link">Главная</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="#">О Седоне</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="hotels.html">Гостиницы</a></li>
+        </ul>
+        <div class="user-navigation">
+          <p class="user-navigation-wrapper">
+            <a class="user-navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+            <a class="user-navigation-link" href="#">
+              <span class="visually-hidden">Сердечко с колличеством лайков</span>
+            </a>
+          </p>
+          <a href="#">Хочу сюда!</a><!--это случайно не ссылка якорь?-->
+        </div>
+      </nav>
+    </header>
+    <main class="page-main"><!--Основное содержимое-->
+      <h1 class="visually-hidden">Туристический сайт по поиску жилья Седона</h1>
+      <section class="promo"><!--Промо Седоны-->
+        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
+        <img class="logo-welcome" src="#" width="456" height="350" alt="Добро пожаловать в Седону">
+      </section>
+      <section class="container-benefits"><!--Промо Причины-->
+        <h2 class="visually-hidden">Причины посещения Седоны</h2>
+        <div class="reason-container">
+          <p>Седона&nbsp;&mdash; небольшой городок в&nbsp; аризоне,<br> заслуживающий большего!</p>
+          <p>Рассмотрим причины, по&nbsp;которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
+        <ul class="reasons-list"><!--Список причин-->
+          <li class="reason-list-item city-photo">
+            <div class="reason-first"><!--Первая причина-->
+              <h3 class="reasons-list-title">Настоящий городок</h3>
+              <p>Седона&nbsp;&ndash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img src="#" width="800" height="256" alt="Вид города Седона">
+          </li>
+          <li class="reason-list-item">
+            <ul class="reasons-continuation"><!--Продолжение причин-->
+              <li class="reason-second">
+                <h3 class="reasons-list-title">Небольшая площадь</h3>
+                <p>Все достопримечательности находятся очень близко</p>
+              </li>
+              <li class="reason-third">
+                <h3 class="reasons-list-title">Красивая дорога</h3>
+                <p>Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+              </li>
+              <li class="reason-fourth">
+                <h3 class="reasons-list-title">Мало туристов</h3>
+                <p>Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
+              </li>
+            </ul>
+          </li>
+          <li class="reason-list-item devils-bridge-canyon"><!--Продолжение причин-->
+            <img src="#" width="800" height="256" alt="Каньон мост дьявола">
+            <div class="reason-fifth">
+              <h3 class="reasons-list-title">Там есть мост дьявола</h3>
+              <p>Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь разумеется</p>
+            </div>
+          </li>
+          <li class="container-advantages"><!--Преимущества-->
+            <ul class="advantages-list">
+              <li class="advantages-list-item advantages-icon icon-home">
+                <h3 class="advantages-title">Жильё</h3>
+                <p>Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!</p>
+              </li>
+              <li class="advantages-list-item advantages-icon icon-food">
+                <h3 class="advantages-title">Еда</h3>
+                <p>Всегда заказывайте топовый фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+              </li>
+              <li class="advantages-list-item advantages-icon icon-souvenirs">
+                <h3 class="advantages-title">Сувениры</h3>
+                <p>Не&nbsp;только китайского, но&nbsp;и настоящего&nbsp;местного производства</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="promo-form"><!--Промо формы-->
+        <h2>Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки,<br> и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;седоне</p>
+          <div class="button-wrapper"><!--Обертка кнопки-->
+            <a class="search-btn" href="search.html" aria-label="Перейти на форму поиска гостиниц">Поиск гостиницы в седоне</a>
+          </div>
+          <div class="form-show"><!--Обертка формы которая скрывает и показывает форму-->
+            <form class="form-booking" action="https://echo.htmlacademy.ru" method="get"><!--Форма поиска гостиницы-->
+              <div class=block-date>
+                <label class="label-date arrival-date-label" for="arrival-date-field">Дата Заезда:</label>
+                <input class="input-date" type="text" name="arrival-date" id="arrival-date-field" placeholder="27 апреля 2020">
+                <button type="button" class="calendar" aria-label="Открыть каленадарь"></button>
+              </div>
+              <div class="block-date">
+                <label class="label-date date-of-departure-label" for="departure-date-field">Дата выезда:</label>
+                <input class="input-date" type="text" name="date-of-departure" id="departure-date-field" placeholder="1 сентября 2023">
+                <button type="button" class="calendar" aria-label="Открыть каленадарь"></button>
+              </div>
+              <div class="form-booking-container-inner"><!--Кнопки счетчик-->
+                <label class="label-number label-adults" for="adults-number-field">Взрослые:</label>
+                <div class="less-more">
+                  <button class="btn-less" type="button" aria-label="Уменьшить колличество взрлослых"><svg width="12" height="3" fill="A9A9A9" xmlns="http://www.w3.org/2000/svg"><path fill="#A9A9A9" d="M0 0h12v3H0z"/></svg></button>
+                  <input class="field-adults" type="text" name="number" id="adults-number-field" placeholder="2">
+                  <button class="btn-more" type="button" aria-label="Увеличить колличество взрлослых"><svg width="11" height="11" fill="A9A9A9" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/></svg></button>
+                </div>
 
+                <label class="label-number label-children" for="child-number-field">Дети:</label>
+                <div class="less-more less-more-number-child">
+                  <button class="btn-less" type="button" aria-label="Уменьшить колличество детей"><svg width="12" height="3" fill="A9A9A9" xmlns="http://www.w3.org/2000/svg"><path fill="#A9A9A9" d="M0 0h12v3H0z"/></svg></button>
+                  <input class="field-children" type="text" name="number-child" id="child-number-field" placeholder="2">
+                  <button class="btn-more" type="button" aria-label="Увеличить колличество детей"><svg width="11" height="11" fill="A9A9A9" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/></svg></button>
+                </div>
+              </div>
+              <button class="button-find" type="submit" aria-label="Найти подхощие варианты">Найти</button>
+            </form>
+          </div>
+      </section>
+      <section class="section-newsletter">
+        <h2 class="visually-hidden">Секция с формой подписки</h2>
+        <p class="subtitle">Подпишитесь на рассылку</p>
+        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="newsletter-form" method="post" action="https://echo.htmlacademy.ru">
+          <label for="newsletter-field-id">Ваш e-mail</label>
+          <input type="email" name="newsletter-field" id="newsletter-field-id" required>
+          <button class="btn newsletter-btn" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+    <footer class="main-footer"><!--Подвал-->
+      <div class="wrapper-footer"><!--Обертка содержимого подвала-->
+        <ul class="footer-social-list"><!--Ссылки на социальные сети-->
+          <li class="social-item">
+            <a class="social social-vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li class="social-item">
+            <a class="social social-tg" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span></a>
+          </li>
+          <li class="social-item">
+            <a class="social social-yt" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+          </li>
+        </ul>
+        <div class="contacts">
+          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
+        <div class="copyright"><!--Копирайт-->
+          <a class="link-website" href="https://htmlacademy.ru/" aria-label="Сделана в рамках интенсива HTML-ACADEMY Перейти на вебсайт">
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
