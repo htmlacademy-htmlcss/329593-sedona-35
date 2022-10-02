@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+  <meta charset="utf-8">
+    <title>Седона поиск жилья</title>
+  </head>
+  <body class="page-body">
+    <header class="main-header"><!--Шапка-->
+      <nav class="main-navigation"><!--Навигация-->
+        <a class="main-header-logo">
+          <img src="#" width="138" height="70" alt="Логотип «Седона»">
+        </a>
+        <ul class="site-navigation">
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="index.html">Главная</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link navigation-link-current">Гостиницы</a>
+          </li>
+        </ul>
+        <div class="user-navigation">
+          <p class="user-navigation-wrapper">
+            <a class="user-navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+            <a class="user-navigation-link" href="#">
+              <span class="visually-hidden">Сердечко с колличеством лайков</span>
+            </a>
+          </p>
+          <a href="#">Хочу сюда!</a>
+        </div>
+      </nav>
+    </header>
+  </body>
+  <main class="page-hotels">
+    <section class="section-filters-hotels"><!--Оглавление-->
+      <header class="header-filters-hotels"><!--Шапка с хлебными крошками-->
+        <h1 class="hotels-filters-title">Гостиницы Седоны</h1>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">
+              <img class="breadcrumbs-icon" src="#" alt="На главную страницу" />
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Гостиницы</a>
+          </li>
+        </ol>
+      </header>
+      <form class="form-filter" action="https://echo.htmlacademy.ru" method="get"><!--Форма с фильтрами-->
+        <fieldset class="form-fieldset infrastructure"><!--Группа с чекбоксами-->
+          <legend class="form-legend">Инфраструктура:</legend>
+          <ul class="form-list">
+            <li class="form-item">
+              <label for="filter-pool" class="check option check-on">
+                <input class="input-check" type="checkbox" name="pool" id="filter-pool" checked>
+                <span class="check-box"></span>
+                <span class="form-item-text">Бассейн</span>
+              </label>
+            </li>
+            <li class="form-item">
+              <label for="filter-parking" class="check option check-on">
+                <input class="input-check" type="checkbox" name="parking" id="filter-parking">
+                <span class="check-box check-box-parking"></span>
+                <span class="form-item-text">Парковка</span>
+              </label>
+            </li>
+            <li class="form-item">
+              <label for="filter-wi-fi" class="check option check-off">
+                <input class="input-check" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <span class="check-box check-box-wi-fi"></span>
+                <span class="form-item-text">Wi-fi</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form-fieldset type-of-housing"><!--Группа с радиокнопками, потом переделаю-->
+          <legend class="form-legend">Тип жилья:</legend>
+            <ul class="form-list">
+              <li class="form-item">
+                <label for="filter-hotel" class="radio option radio-on">
+                  <input class="input-check" type="radio" name="radio-group" id="filter-hotel" value="hotel" checked>
+                  <span class="radio-check"></span>
+                  <span class="form-item-text">Гостиница</span>
+                </label>
+              </li>
+              <li class="form-item">
+                <label for="filter-motel" class="radio option radio-on">
+                  <input class="input-check" type="radio" name="radio-group" id="filter-motel" value="motel">
+                  <span class="radio-check"></span>
+                  <span class="form-item-text">Мотель</span>
+                </label>
+              </li>
+              <li class="form-item">
+                <label for="filter-apartments" class="radio option radio-on">
+                  <input class="input-check" type="radio" name="radio-group" id="filter-apartments" value="apartments">
+                  <span class="radio-check"></span>
+                  <span class="form-item-text">Апартаменты</span>
+                </label>
+              </li>
+            </ul>
+        </fieldset>
+        <fieldset class="form-fieldset price"><!--Фильтр с диапозоном-->
+          <legend class="form-legend form-legend-price">Стоимость, ₽:</legend>
+          <div class="range-filter">
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="text" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="text" name="max-price" value="3000">
+              </label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0"></div>
+              <div class="toggle toggle-max" tabindex="0"></div>
+            </div>
+          </div>
+        </fieldset>
+        <p class="form-wrapper-button">
+          <button type="submit" class="button-apply">
+            <span class="visually-hidden">Показать подходящие варианты</span>
+            Применить
+          </button>
+          <button type="submit" class="button-apply">
+            <span class="visually-hidden">Сбросить выбранные значения</span>
+            Сбросить
+          </button>
+        </p>
+      </form>
+    </section>
+    <header class="section-sortings">
+      <h2 class="visually-hidden">Результаты поиска гостиниц</h2>
+      <p>Найдено гостиниц: 38</p>
+      <select class="hotel-sorting" aria-label="Сортировка гостиниц по ценовой категорий">
+        <option value="cheap-first" selected>Сначала дешевые</option>
+        <option value="expensive-first">Сначала дорогие</option>
+        <option value="most-populars">Самые популярные</option>
+      </select>
+      <ul class="card-display">
+        <li class="card-display-item">
+          <a class="card-button" href="#">
+            <span class="visually-hidden">Показать карточки гостиниц</span>
+            <img class="card-button-icon" alt="карточки-гостиниц">
+          </a>
+        </li>
+        <li class="card-display-item">
+          <a class="card-button" href="#">
+            <span class="visually-hidden">Показать слайд гостиниц</span>
+            <img class="card-button-icon" alt="слайд-гостиниц">
+          </a>
+        </li>
+        <li class="card-display-item">
+          <a class="card-button" href="#">
+            <span class="visually-hidden">Показать список гостиниц</span>
+            <img class="card-button-icon" alt="список гостиниц">
+          </a>
+        </li>
+      </ul>
+    </header>
+    <section class="section-hotels"><!--Список Отелей-->
+      <h2 class="visually-hidden">Список гостиниц</h2>
+      <ul class="list-of-hotels">
+        <li class="hotels-block">
+          <h3><a class="hotel-info-title" href="#">Amara Resort & Spa</a></h3>
+          <img class="amara-resort-img" src="#" width="300" height="212" alt="Идеальный романтический курорт, Амара Резорт & Спа">
+          <table class="table-info-hotel">
+            <tr class="desctiption-row">
+              <td class="text-cell">
+                Гостиница
+              </td>
+              <td class="text-cell">
+                От 4000 р.
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td>
+                <a class="more" href="#">
+                  <span class="visually-hidden">Узнать больше о гостинице Amara Resort & Spa</span>
+                  Подробнее
+                </a>
+              </td>
+              <td>
+                <a class="to-book" href="#" aria-label="Забронировать номер в гостинице Amara Resort & Spa">
+                  <span class="visually-hidden">Добавить в избранное гостиницу Amara Resort & Spa</span>
+                  В избранное
+                </a>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="stars four-stars">
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="rating">Рейтинг: 8,5</div>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li class="hotels-block">
+          <h3><a class="hotel-info-title" href="#">Villas at Poco Diablo</a></h3>
+          <img src="#" width="300" height="212" alt="Уютное совершенство, Виллы Оф Поко Дайабло">
+          <table class="table-info-hotel">
+            <tr class="desctiption-row">
+              <td class="text-cell">
+                Гостиница
+              </td>
+              <td class="text-cell">
+                От 5000 р.
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td>
+                <a class="more" href="#">
+                  <span class="visually-hidden">Узнать больше о гостинице Villas at Poco Diablo</span>
+                  Подробнее
+                </a>
+              </td>
+              <td>
+                <a class="to-book" href="#" aria-label="Забронировать номер в гостинице Amara Resort & Spa">
+                  <span class="visually-hidden">Добавить в избранное гостиницу Villas at Poco Diablo</span>
+                  В избранном
+                </a>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="stars four-stars">
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="rating">Рейтинг: 9,2</div>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li class="hotels-block">
+          <h3><a class="hotel-info-title" href="#">Desert Quail Inn</a></h3>
+          <img src="#" width="300" height="212" alt="Высококлассный мотель, Дезерт Квейл Инн">
+          <table class="table-info-hotel">
+            <tr class="desctiption-row">
+              <td class="text-cell">
+                Гостиница
+              </td>
+              <td class="text-cell">
+                От 2500 р.
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td>
+                <a class="more" href="#">
+                  <span class="visually-hidden">Узнать больше о гостинице Desert Quail Inn</span>
+                  Подробнее
+                </a>
+              </td>
+              <td>
+                <a class="to-book" href="#" aria-label="Забронировать номер в гостинице Amara Resort & Spa">
+                  <span class="visually-hidden">Добавить в избранное гостиницу Desert Quail Inn</span>
+                  В избранное
+                </a>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="stars three-stars">
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="rating">Рейтинг: 6,9</div>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li class="hotels-block">
+          <h3><a class="hotel-info-title" href="#">GreenTree Inn</a></h3>
+          <img src="#" width="300" height="212" alt="GreenTree это первоклассное, экономичное и экологически чистое жилье">
+          <table class="table-info-hotel">
+            <tr class="desctiption-row">
+              <td class="text-cell">
+                Гостиница
+              </td>
+              <td class="text-cell">
+                От 1500 р.
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td>
+                <a class="more" href="#">
+                  <span class="visually-hidden">Узнать больше о гостинице GreenTree Inn</span>
+                  Подробнее
+                </a>
+              </td>
+              <td>
+                <a class="to-book" href="#" aria-label="Забронировать номер в гостинице Amara Resort & Spa">
+                  <span class="visually-hidden">Добавить в избранное гостиницу GreenTree Inn</span>
+                  В избранное
+                </a>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="stars three-stars">
+                  <span class="icon-stars"></span>
+                  <span class="icon-stars"></span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hotel-rating-row">
+              <td>
+                <div class="rating">Рейтинг: 5,0</div>
+              </td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <ul class="pagination-list">
+        <li class="pagination-item">
+          <a class="pagination-link pagination-link-current" href="#">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">4</a>
+        </li>
+        <li class="pagination-item">...</li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">10</a>
+        </li>
+      </ul>
+    </section>
+    <section class="section-newsletter-hotels">
+      <h2 class="visually-hidden">Секция с формой подписки</h2>
+      <p class="subtitle">Подпишитесь на рассылку</p>
+      <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form class="newsletter-form" method="post" action="https://echo.htmlacademy.ru">
+        <label for="newsletter-field-id">Ваш e-mail</label>
+        <input type="email" name="newsletter-field" id="newsletter-field-id" required>
+        <button class="btn newsletter-btn" type="submit">
+          <span class="visually-hidden">Подписаться на новостную рассылку</span>
+          Подписаться
+        </button>
+      </form>
+    </section>
+  </main>
+  <footer class="main-footer"><!--Подвал-->
+    <div class="wrapper-footer"><!--Обертка содержимого подвала-->
+      <ul class="footer-social-list"><!--Ссылки на социальные сети-->
+        <li class="social-item">
+          <a class="social social-vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="social social-tg" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="social social-yt" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+      <address class="contacts">
+        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </address>
+      <div class="copyright"><!--Копирайт-->
+        <a class="link-website" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">Сделана в рамках интенсива HTML-ACADEMY Перейти на вебсайт</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</html>
