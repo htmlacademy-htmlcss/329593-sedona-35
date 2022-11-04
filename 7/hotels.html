@@ -65,36 +65,36 @@
               <fieldset class="form-fieldset infrastructure"><!--Группа с чекбоксами-->
                 <legend class="form-legend">Инфраструктура:</legend>
                 <label class="check option check-on" for="filter-pool">
-                  <input class="input-check" type="checkbox" name="pool" id="filter-pool" checked>
-                  <span class="check-box"></span>
+                  <input class="visually-hidden input-check" type="checkbox" name="pool" id="filter-pool" checked>
+                  <span class="control-check-box check-box-pool"></span>
                   <span class="form-filter-text">Бассейн</span>
                 </label>
                 <label class="check option check-on" for="filter-parking">
-                  <input class="input-check" type="checkbox" name="parking" id="filter-parking">
-                  <span class="check-box check-box-parking"></span>
+                  <input class="visually-hidden input-check" type="checkbox" name="parking" id="filter-parking" checked>
+                  <span class="control-check-box check-box-parking"></span>
                   <span class="form-filter-text">Парковка</span>
                 </label>
                 <label class="check option check-off" for="filter-wi-fi">
-                  <input class="input-check" type="checkbox" name="wi-fi" id="filter-wi-fi">
-                  <span class="check-box check-box-wi-fi"></span>
+                  <input class="visually-hidden input-check" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                  <span class="control-check-box check-box-wi-fi"></span>
                   <span class="form-filter-text">Wi-fi</span>
                 </label>
               </fieldset>
               <fieldset class="form-fieldset type-of-housing"><!--Группа с радиокнопками, потом переделаю-->
                 <legend class="form-legend">Тип жилья:</legend>
                 <label  class="radio option radio-on" for="filter-hotel">
-                  <input class="input-check" type="radio" name="type-of-housing-group" id="filter-hotel" value="hotel" checked>
-                  <span class="radio-check"></span>
+                  <input class="visually-hidden input-check-radio" type="radio" name="type-of-housing-group" id="filter-hotel" value="hotel" checked>
+                  <span class="control-radio-check"></span>
                   <span class="form-filter-text">Гостиница</span>
                 </label>
                 <label class="radio option radio-on" for="filter-motel">
-                  <input class="input-check" type="radio" name="type-of-housing-group" id="filter-motel" value="motel">
-                  <span class="radio-check"></span>
+                  <input class="visually-hidden input-check-radio" type="radio" name="type-of-housing-group" id="filter-motel" value="motel">
+                  <span class="control-radio-check"></span>
                   <span class="form-filter-text">Мотель</span>
                 </label>
                 <label class="radio option radio-on" for="filter-apartments">
-                  <input class="input-check" type="radio" name="type-of-housing-group" id="filter-apartments" value="apartments">
-                  <span class="radio-check"></span>
+                  <input class="visually-hidden input-check-radio" type="radio" name="type-of-housing-group" id="filter-apartments" value="apartments">
+                  <span class="control-radio-check"></span>
                   <span class="form-filter-text">Апартаменты</span>
                 </label>
               </fieldset>
@@ -105,18 +105,18 @@
                     <label class="range-filter-label min-price-label" for="min-price-id">
                       от
                     </label>
-                     <input class="range-filter-field range-filter-min-price" type="text" name="min-price" id="min-price-id" value="0">
+                     <input class="range-filter-field range-filter-min-price" type="number" name="min-price" id="min-price-id" value="0">
                     <label class="range-filter-label max-price-label" for="max-price-id">
                       до
                     </label>
-                     <input class="range-filter-field range-filter-max-price" type="text" name="max-price" id="max-price-id" value="9000">
+                     <input class="range-filter-field range-filter-max-price" type="number" name="max-price" id="max-price-id" value="9000">
                   </div>
                   <div class="range-controls">
-                    <div class="scale">
+                    <div class="scale" style="left: 0; width: 226px;">
                       <div class="bar"></div>
+                      <button class="toggle toggle-min" type="button"></button>
+                      <button class="toggle toggle-max" type="button"></button>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
                 </div>
               </fieldset>
