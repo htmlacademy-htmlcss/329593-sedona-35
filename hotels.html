@@ -129,28 +129,30 @@
         <header class="section-sortings"><!--Секция сортировки и с результатом поиска-->
           <h2 class="visually-hidden">Результаты поиска гостиниц</h2>
           <p class="section-sorting-subtitle">Найдено гостиниц: 38</p>
-          <select class="hotel-sorting" aria-label="Сортировка гостиниц по ценовой категорий">
-            <option class="drop-down-list" value="cheap-first" selected>Сначала дешевые</option>
-            <option class="drop-down-list" value="expensive-first">Сначала дорогие</option>
-            <option class="drop-down-list" value="most-populars">Самые популярные</option>
-          </select>
+          <div class="hotel-sorting-wrapper">
+            <select class="hotel-sorting" aria-label="Сортировка гостиниц по ценовой категорий">
+              <option class="drop-down-list" value="cheap-first" selected>Сначала дешевые</option>
+              <option class="drop-down-list" value="expensive-first">Сначала дорогие</option>
+              <option class="drop-down-list" value="most-populars">Самые популярные</option>
+            </select>
+          </div>
           <ul class="card-display user-agent-style">
             <li class="card-display-item">
               <a class="card-button card-button-current" href="#">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" fill="#000"/></svg>
                 <span class="visually-hidden">Показать карточки гостиниц.</span>
-                <img class="card-button-icon" src="images/icons/show-display-card-icon.svg" width="16" height="14" alt="карточки-гостиниц">
               </a>
             </li>
             <li class="card-display-item">
               <a class="card-button" href="#">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000"/></svg>
                 <span class="visually-hidden">Показать слайд гостиниц.</span>
-                <img class="card-button-icon" src="images/icons/show-display-slide-icon.svg" width="16" height="14" alt="слайд-гостиниц">
               </a>
             </li>
             <li class="card-display-item">
               <a class="card-button" href="#">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" fill="#000"/></svg>
                 <span class="visually-hidden">Показать список гостиниц.</span>
-                <img class="card-button-icon" src="images/icons/show-display-list-icon.svg" width="16" height="14" alt="список гостиниц">
               </a>
             </li>
           </ul>
@@ -187,7 +189,7 @@
                 <span class="visually-hidden">Узнать больше о гостинице Villas at Poco Diablo.</span>
                 Подробнее
               </a>
-              <button type="button" class="list-of-hotels-link to-favorites hotels-link-in-favorites">В избранном</button>
+              <button type="button" class="list-of-hotels-link to-favorites hotels-link-in-favorites" disabled>В избранном</button>
               <div class="stars four-stars">
                 <span class="icon-stars"></span>
                 <span class="icon-stars"></span>
@@ -257,7 +259,7 @@
         <section class="section-newsletter section-newsletter-hotels"><!--Секция с формой подписки-->
           <h2 class="visually-hidden">Секция с формой подписки</h2>
           <p class="section-newsletter-hotels-subtitle">Подпишитесь на рассылку</p>
-          <p class="section-newsletter-hotels-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="section-newsletter-hotels-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="newsletter-form" method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="newsletter-field-id">Ваш e-mail</label>
             <input class="newsletter-field" type="email" name="newsletter-field" id="newsletter-field-id" placeholder="Ваш e-mail" required>
