@@ -362,6 +362,7 @@ img {
   background-color: #f2f2f2;
   padding-right: 22px;
   padding-left: 22px;
+  height: min-content;
 }
 
 .pagination-link {
@@ -379,6 +380,7 @@ img {
   padding: 51px 371px 77px 371px;
   text-align: center;
   background: url("../images/background/promo-background.jpg") no-repeat;
+  background-size: 100% 100%;
   background-color: #414141;
 }
 
