@@ -380,7 +380,7 @@ img {
   padding: 51px 371px 77px 371px;
   text-align: center;
   background: url("../images/background/promo-background.jpg") no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-color: #414141;
 }
 
